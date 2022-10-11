@@ -1,0 +1,24 @@
+{
+  "title": "Boilerplate (SNORDIAN)",
+  "description": "Boilerplate for plain H5P content types (SNORDIAN style)",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "author": "Oliver Tacke",
+  "license": "MIT",
+  "machineName": "H5P.BoilerplateSNORDIAN",
+  "embedTypes": [
+    "iframe"
+  ],
+  "preloadedJs": [
+    {
+      "path": "dist/h5p-boilerplate-snordian.js"
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "dist/h5p-boilerplate-snordian.css"
+    }
+  ]
+}

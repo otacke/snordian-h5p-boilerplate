@@ -1,0 +1,70 @@
+[
+  {
+    "name": "sample",
+    "type": "boolean",
+    "label": "Sample"
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "importance": "low",
+    "label": "Behavioural settings",
+    "fields": [
+      {
+        "name": "sample",
+        "type": "boolean",
+        "label": "Sample behaviour"
+      },
+      {
+        "name": "dummy",
+        "type": "boolean",
+        "label": "Dummy",
+        "widget": "none"
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "User interface",
+    "common": true,
+    "fields": [
+      {
+        "name": "sample",
+        "type": "text",
+        "label": "Sample entry for visible user interface strings",
+        "description": "This is just a sample entry for visible user interface strings.",
+        "default": "Sample l10n"
+      },
+      {
+        "name": "dummy",
+        "type": "text",
+        "label": "Dummy",
+        "default": "Dummy",
+        "widget": "none"
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Accessibility texts",
+    "common": true,
+    "fields": [
+      {
+        "name": "sample",
+        "type": "text",
+        "label": "Sample entry for accessibility strings",
+        "description": "This is just a sample entry for accessibility strings.",
+        "default": "Sample a11y"
+      },
+      {
+        "name": "dummy",
+        "type": "text",
+        "label": "Dummy",
+        "default": "Dummy",
+        "widget": "none"
+      }
+    ]
+  }
+]
