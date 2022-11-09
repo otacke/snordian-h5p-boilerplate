@@ -1,4 +1,4 @@
-import Util from './util';
+import Util from './services/util';
 import Dictionary from './services/dictionary';
 import '../styles/h5p-boilerplate-snordian.scss';
 
