@@ -8,6 +8,7 @@ src
 .git
 .babelrc
 .gitmodules
+.eslintrc
 .h5pignore
 .travis.yml
 karma.conf.js
