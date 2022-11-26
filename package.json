@@ -26,7 +26,6 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.2",
     "eslint": "^8.28.0",
-    "eslint-config-stylelint": "^17.0.0",
     "eslint-plugin-jsdoc": "^39.6.4",
     "mini-css-extract-plugin": "^2.7.0",
     "regenerator-runtime": "^0.13.11",

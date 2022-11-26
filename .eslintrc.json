@@ -11,8 +11,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:jsdoc/recommended",
-    "stylelint"
+    "plugin:jsdoc/recommended"
   ],
   "parserOptions": {
     "sourceType": "module",
