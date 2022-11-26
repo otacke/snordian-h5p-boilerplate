@@ -34,7 +34,8 @@
     }],
     "no-extra-boolean-cast": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
-    "arrow-parens": ["error", "always"]
+    "arrow-parens": ["error", "always"],
+    "quotes": ["error", "single"]
   },
   "plugins": ["jsdoc"],
   "settings": {
