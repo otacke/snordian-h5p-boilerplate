@@ -73,7 +73,8 @@ npm run watch
 ```
 Before putting the code in production, you should always run `npm run build`.
 
-Also, you should run ```bash
+Also, you should run
+```bash
 npm run lint
 ```
 in order to check for coding style guide violations.
