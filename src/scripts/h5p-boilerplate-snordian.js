@@ -34,9 +34,6 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
 
     this.previousState = extras?.previousState || {};
 
-    const defaultLanguage = extras?.metadata?.defaultLanguage || 'en';
-    this.languageTag = Util.formatLanguageCode(defaultLanguage);
-
     this.dom = this.buildDOM();
   }
 
