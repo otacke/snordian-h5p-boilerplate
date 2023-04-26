@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "stylelint './src/**/*.scss' && eslint './src/**/*.js'",
-    "build": "cross-env NODE_ENV=production webpack",
-    "watch": "cross-env NODE_ENV=development webpack --watch"
+    "build": "rm -r dist & webpack --mode=production",
+    "watch": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "babel-loader": "^9.1.2",
-    "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "eslint": "^8.38.0",
     "eslint-plugin-jsdoc": "^43.0.6",
