@@ -34,9 +34,10 @@
     }],
     "no-extra-boolean-cast": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
-    "arrow-parens": ["error", "always"],
     "quotes": ["error", "single"],
-    "object-curly-spacing": ["error", "always"]
+    "arrow-parens": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "no-alert": ["error"]
   },
   "plugins": ["jsdoc"],
   "settings": {
