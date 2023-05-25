@@ -8,8 +8,9 @@ src
 .git
 .babelrc
 .gitmodules
-.eslintrc
+.eslintrc.json
 .h5pignore
+.stylelintrc.json
 .travis.yml
 karma.conf.js
 webpack.config.js
