@@ -30,7 +30,8 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
     this.extras = extras;
 
     // Fill dictionary
-    Dictionary.fill({ l10n: this.params.l10n, a11y: this.params.a11y });
+    this.dictionary = new Dictionary();
+    this.dictionary.fill({ l10n: this.params.l10n, a11y: this.params.a11y });
 
     this.previousState = extras?.previousState || {};
 
