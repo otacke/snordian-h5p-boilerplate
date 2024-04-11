@@ -1,5 +1,5 @@
-import Util from '@services/util';
-import Dictionary from '@services/dictionary';
+import Util from '@services/util.js';
+import Dictionary from '@services/dictionary.js';
 import '@styles/h5p-boilerplate-snordian.scss';
 
 export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
