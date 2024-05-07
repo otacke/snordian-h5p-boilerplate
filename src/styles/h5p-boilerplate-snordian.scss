@@ -4,9 +4,14 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+* {
   box-sizing: inherit;
 }
+
+// These are nice to have, but can cause trouble in the H5P editor
+// *:before, *:after {
+//   box-sizing: inherit;
+// }
 
 .h5p-boilerplate-snordian {
   background-color: $color-background;
