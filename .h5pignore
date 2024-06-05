@@ -8,7 +8,7 @@ src
 .git
 .babelrc
 .gitmodules
-.eslintrc.json
+eslint.config.js
 .h5pignore
 .stylelintrc.json
 .travis.yml
