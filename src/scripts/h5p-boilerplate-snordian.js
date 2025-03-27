@@ -2,6 +2,9 @@ import Util from '@services/util.js';
 import Dictionary from '@services/dictionary.js';
 import '@styles/h5p-boilerplate-snordian.scss';
 
+/** @constant {string} Default description */
+const DEFAULT_DESCRIPTION = 'Boilerplate (SNORDIAN)';
+
 export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
   /**
    * @class
@@ -66,7 +69,7 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
   getTitle() {
     // H5P Core function: createTitle
     return H5P.createTitle(
-      this.extras?.metadata?.title || BoilerplateSNORDIAN.DEFAULT_DESCRIPTION
+      this.extras?.metadata?.title || DEFAULT_DESCRIPTION
     );
   }
 
@@ -75,9 +78,6 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
    * @returns {string} Description.
    */
   getDescription() {
-    return BoilerplateSNORDIAN.DEFAULT_DESCRIPTION;
+    return DEFAULT_DESCRIPTION;
   }
 }
-
-/** @constant {string} Default description */
-BoilerplateSNORDIAN.DEFAULT_DESCRIPTION = 'Boilerplate (SNORDIAN)';
