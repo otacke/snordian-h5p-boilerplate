@@ -19,14 +19,14 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
     this.params = Util.extend({
       sample: true,
       behaviour: {
-        sample: 'Sample behaviour'
+        sample: 'Sample behaviour',
       },
       l10n: {
-        sample: 'Sample l10n'
+        sample: 'Sample l10n',
       },
       a11y: {
-        sample: 'Sample a11y'
-      }
+        sample: 'Sample a11y',
+      },
     }, params);
 
     this.contentId = contentId;
@@ -69,7 +69,7 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
   getTitle() {
     // H5P Core function: createTitle
     return H5P.createTitle(
-      this.extras?.metadata?.title || DEFAULT_DESCRIPTION
+      this.extras?.metadata?.title || DEFAULT_DESCRIPTION,
     );
   }
 
