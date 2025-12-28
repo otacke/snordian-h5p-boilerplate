@@ -1,0 +1,39 @@
+.h5p-boilerplate-snordian {
+  /* Common colors */
+  --color-background: hsl(0, 0%, 100%);
+  --color-text: hsl(274, 9%, 29%);
+  --color-text-dark: var(--color-text);
+  --color-text-light: hsl(0, 0%, 100%);
+
+  /* Disabled color, e.g. for buttons */
+  --color-disabled: hsla(0, 0%, 50%, 0.95);
+
+  /* Hint box, e.g. for when no content is set */
+  --color-hint-message-background: hsl(36, 62%, 90%);
+  --color-hint-message-border: hsl(53, 82%, 63%);
+  --color-hint-message-text: hsl(31, 76%, 35%);
+
+  /* Primary color with common gradients */
+  --color-primary: hsl(212, 79%, 48%);
+  --color-primary-5: hsl(from var(--color-primary) h s l / 5%);
+  --color-primary-10: hsl(from var(--color-primary) h s l / 10%);
+  --color-primary-15: hsl(from var(--color-primary) h s l / 15%);
+  --color-primary-30: hsl(from var(--color-primary) h s l / 30%);
+  --color-primary-50: hsl(from var(--color-primary) h s l / 50%);
+  --color-primary-70: hsl(from var(--color-primary) h s l / 70%);
+  --color-primary-85: hsl(from var(--color-primary) h s l / 85%);
+  --color-primary-90: hsl(from var(--color-primary) h s l / 90%);
+  --color-primary-95: hsl(from var(--color-primary) h s l / 95%);
+
+  /* Commonly used by H5P Group */
+  --color-joubelui-button: hsl(212, 79%, 48%);
+  --color-joubelui-button-hover: hsl(212, 79%, 36%);
+  --color-joubelui-button-active: hsl(212, 79%, 30%);
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  .h5p-boilerplate-snordian-main {
+    text-align: center;
+  }
+}

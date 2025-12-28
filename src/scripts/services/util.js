@@ -1,25 +1,21 @@
-/** Class for utility functions */
-export default class Util {
-  /**
-   * Extend an array just like JQuery's extend.
-   * @returns {object} Merged objects.
-   */
-  static extend() {
-    for (let i = 1; i < arguments.length; i++) {
-      for (let key in arguments[i]) {
-        if (Object.prototype.hasOwnProperty.call(arguments[i], key)) {
-          if (
-            typeof arguments[0][key] === 'object' &&
-            typeof arguments[i][key] === 'object'
-          ) {
-            this.extend(arguments[0][key], arguments[i][key]);
-          }
-          else {
-            arguments[0][key] = arguments[i][key];
-          }
+/**
+ * Extend an array just like JQuery's extend.
+ * @param {...object} args Objects to merge.
+ * @returns {object} Merged objects.
+ */
+export const extend = (...args) => {
+  for (let i = 1; i < args.length; i++) {
+    for (let key in args[i]) {
+      if (Object.prototype.hasOwnProperty.call(args[i], key)) {
+        if (typeof args[0][key] === 'object' && typeof args[i][key] === 'object') {
+          extend(args[0][key], args[i][key]);
+        }
+        else if (args[i][key] !== undefined) {
+          args[0][key] = args[i][key];
         }
       }
     }
-    return arguments[0];
   }
-}
+
+  return args[0];
+};

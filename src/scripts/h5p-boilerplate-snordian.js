@@ -1,6 +1,7 @@
-import Util from '@services/util.js';
+import { extend } from '@services/util.js';
+import { getSemanticsDefaults } from '@services/util-h5p.js';
 import Dictionary from '@services/dictionary.js';
-import '@styles/h5p-boilerplate-snordian.scss';
+import '@styles/h5p-boilerplate-snordian.css';
 
 /** @constant {string} Default description */
 const DEFAULT_DESCRIPTION = 'Boilerplate (SNORDIAN)';
@@ -16,18 +17,8 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
     super();
 
     // Sanitize parameters
-    this.params = Util.extend({
-      sample: true,
-      behaviour: {
-        sample: 'Sample behaviour',
-      },
-      l10n: {
-        sample: 'Sample l10n',
-      },
-      a11y: {
-        sample: 'Sample a11y',
-      },
-    }, params);
+    const defaults = extend({}, getSemanticsDefaults());
+    this.params = extend(defaults, params);
 
     this.contentId = contentId;
     this.extras = extras;
@@ -36,7 +27,7 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
     this.dictionary = new Dictionary();
     this.dictionary.fill({ l10n: this.params.l10n, a11y: this.params.a11y });
 
-    this.previousState = extras?.previousState || {};
+    this.previousState = this.extras.previousState || {};
 
     this.dom = this.buildDOM();
   }
@@ -46,8 +37,9 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
    * @param {H5P.jQuery} $wrapper Content's container.
    */
   attach($wrapper) {
-    $wrapper.get(0).classList.add('h5p-boilerplate-snordian');
-    $wrapper.get(0).appendChild(this.dom);
+    const wrapper = $wrapper.get(0);
+    wrapper.classList.add('h5p-boilerplate-snordian');
+    wrapper.appendChild(this.dom);
   }
 
   /**
@@ -57,7 +49,7 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
   buildDOM() {
     const dom = document.createElement('div');
     dom.classList.add('h5p-boilerplate-snordian-main');
-    dom.innerText = this.getTitle();
+    dom.textContent = this.getTitle();
 
     return dom;
   }
@@ -68,9 +60,7 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
    */
   getTitle() {
     // H5P Core function: createTitle
-    return H5P.createTitle(
-      this.extras?.metadata?.title || DEFAULT_DESCRIPTION,
-    );
+    return H5P.createTitle(this.extras?.metadata?.title || DEFAULT_DESCRIPTION);
   }
 
   /**
