@@ -4,7 +4,7 @@
   "description": "Boilerplate for plain H5P content types (SNORDIAN style)",
   "private": true,
   "scripts": {
-    "lint": "stylelint './src/**/*.scss' && eslint './src/**/*.js'",
+    "lint": "stylelint './src/**/*.css' && eslint './src/**/*.js'",
     "build": "webpack --mode=production",
     "watch": "webpack --mode=development --watch"
   },
