@@ -33,6 +33,24 @@ export default class BoilerplateSNORDIAN extends H5P.EventDispatcher {
   }
 
   /**
+   * Workaround for H5P core mutating prototype to inject its isRoot, but ES6 inheritance here.
+   * @returns {boolean} True, if content type is root. Else false.
+   */
+  isRoot() {
+    return !!this.extras.standalone;
+  }
+
+  /**
+   * Workaround for H5P core mutating prototype to inject its getLibraryFilePath, but ES6 inheritance here.
+   * Note that will not work in constructor, as this.libraryInfo is set only afterwards by H5P core.
+   * @param {string} filePath Original filePath parameter.
+   * @returns {string} Libary file path.
+   */
+  getLibraryFilePath = (filePath) => {
+    return `${H5P.getLibraryPath(this.libraryInfo.versionedNameNoSpaces)}/${filePath}`;
+  };
+
+  /**
    * Attach library to wrapper.
    * @param {H5P.jQuery} $wrapper Content's container.
    */
