@@ -1,6 +1,5 @@
 {
   "name": "h5p-boilerplate-snordian",
-  "version": "1.0.0",
   "description": "Boilerplate for plain H5P content types (SNORDIAN style)",
   "private": true,
   "scripts": {
